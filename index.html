@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Chatbot Demo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>E-Commerce Chatbot</h1>
+            <div class="platform-selector">
+                <label for="platform">Platform:</label>
+                <select id="platform">
+                    <option value="motonet" selected>Motonet</option>
+                    <option value="rusta">Rusta</option>
+                </select>
+            </div>
+        </header>
+        
+        <div class="chat-container">
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot">
+                    <div class="message-content">
+                        <p>Hello! I'm your shopping assistant. I can help you add products to your cart. What would you like to shop for today?</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="user-input">
+                <input type="text" id="message-input" placeholder="Ask me to add products to your cart...">
+                <button id="send-button">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div class="cart-container">
+            <h2>Shopping Cart</h2>
+            <div class="cart-items" id="cart-items">
+                <p class="empty-cart">Your cart is empty</p>
+            </div>
+        </div>
+        
+        <div class="status-container">
+            <div class="status-indicator">
+                <span class="status-dot offline" id="status-dot"></span>
+                <span id="status-text">Offline</span>
+            </div>
+            <div class="api-status" id="api-status">
+                Proxy server not connected
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal" id="error-modal">
+        <div class="modal-content">
+            <span class="close-button" id="close-modal">&times;</span>
+            <h2>Error</h2>
+            <p id="error-message"></p>
+            <div class="error-details" id="error-details"></div>
+            <button id="dismiss-error">Dismiss</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
