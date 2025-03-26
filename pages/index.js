@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { useState, useEffect, useRef } from 'react';
 import styles from '../styles/Home.module.css';
+import OpenCartButton from '../components/OpenCartButton';  // New import
 
 export default function Home() {
   // State management
@@ -310,6 +311,8 @@ export default function Home() {
               ))
             )}
           </div>
+          {/* New Open Cart Button */}
+          <OpenCartButton platform={platform} cartItems={cart} />
         </div>
       </main>
       
